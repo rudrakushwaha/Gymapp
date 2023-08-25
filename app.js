@@ -23,7 +23,7 @@ app.use(require('./router/auth'))  //using middleware
 
 //fetching data from config.env file ...to create config.env file we have use  type null > config.env  in the terminal
 // DB=process.env.DATABASE  
-PORT=process.env.PORT
+PORT=process.env.PORT || 5000 ;
 
 
 
