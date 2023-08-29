@@ -4,6 +4,14 @@ const app = express();
 const dotenv= require("dotenv")   //requiring dotenv
 // app.use(cookieParser())
 
+// ////////CORS
+const cors = require('cors');
+
+////////////CORS POLICY//////
+app.use(cors({
+    origin:["http://localhost:3000","https://hgym.onrender.com/"],
+}));
+
 
 
 //including or using dotenv to secure our necessary or important data
