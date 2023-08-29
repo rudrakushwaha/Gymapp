@@ -4,9 +4,6 @@ const app = express();
 const dotenv= require("dotenv")   //requiring dotenv
 // app.use(cookieParser())
 
-// ////////CORS
-const cors = require('cors');
-
 
 
 //including or using dotenv to secure our necessary or important data
