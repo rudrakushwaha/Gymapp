@@ -4,6 +4,9 @@ const app = express();
 const dotenv= require("dotenv")   //requiring dotenv
 // app.use(cookieParser())
 
+// ////////CORS
+const cors = require('cors');
+
 
 
 //including or using dotenv to secure our necessary or important data
@@ -20,6 +23,13 @@ app.use(express.json())
 // we link the router files to make the route easy
 app.use(require('./router/auth'))  //using middleware
 //////////////////////////////////////
+
+////////////CORS POLICY//////
+app.use(cors({
+    origin:["http://localhost:3000","https://hgym.onrender.com/"],
+}));
+
+
 
 //fetching data from config.env file ...to create config.env file we have use  type null > config.env  in the terminal
 // DB=process.env.DATABASE  

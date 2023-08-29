@@ -136,7 +136,8 @@ router.post('/signin', async (req, res) => {
                     expires: new Date(Date.now() + 2589200000),  //in milliseconds...30 din baad user ka jwttoken expire ho jayega
                     httpOnly: true   //to run on http as we are not secure
                 })
-                res.json({ message: "user signin successfully" })
+                // res.status(200).json({ message: "user signin successfully" })
+                res.send({message:"successfully login"})
             }
         } else {
             res.status(404).json({ error: "INAVLID CREDENTIALS" })
