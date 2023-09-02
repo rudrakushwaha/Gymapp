@@ -14,6 +14,7 @@ router.use(cookieParser())
 require('../db/connection')
 const User = require('../model/UserSchema')
 
+router.use(express.json())
 
 router.get('/', (req, res) => {
     res.send("hello world from the server routerjs")
